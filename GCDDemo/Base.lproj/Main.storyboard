@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GCDDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axT-8a-78Y">
+                                <rect key="frame" x="146.5" y="94" width="121" height="30"/>
+                                <state key="normal" title="同步-并行-主线程"/>
+                                <connections>
+                                    <action selector="syncConcurrentMainThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uW3-1Q-ct1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhr-TJ-VgA">
+                                <rect key="frame" x="146.5" y="134" width="121" height="30"/>
+                                <state key="normal" title="同步-并行-子线程"/>
+                                <connections>
+                                    <action selector="syncConcurrentNewThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yTj-Ku-fSY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sc-yZ-AyU">
+                                <rect key="frame" x="146.5" y="174" width="121" height="30"/>
+                                <state key="normal" title="异步-并行-主线程"/>
+                                <connections>
+                                    <action selector="asyncConcurrentMainThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EIN-l7-dfV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrF-Qv-HxR">
+                                <rect key="frame" x="146.5" y="214" width="121" height="30"/>
+                                <state key="normal" title="异步-并行-子线程"/>
+                                <connections>
+                                    <action selector="asyncConcurrentNewThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D0c-kj-9Ha"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zft-I9-Nzv">
+                                <rect key="frame" x="146.5" y="254" width="121" height="30"/>
+                                <state key="normal" title="同步-串行-主线程"/>
+                                <connections>
+                                    <action selector="syncSerialMainThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iSE-pw-9sS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAf-ss-zf1">
+                                <rect key="frame" x="146.5" y="294" width="121" height="30"/>
+                                <state key="normal" title="同步-串行-子线程"/>
+                                <connections>
+                                    <action selector="syncSerialNewThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="orO-c4-179"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOt-N8-vgs">
+                                <rect key="frame" x="146.5" y="334" width="121" height="30"/>
+                                <state key="normal" title="异步-串行-主线程"/>
+                                <connections>
+                                    <action selector="asyncSerialMainThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UiA-vt-eHy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGv-SB-XgQ">
+                                <rect key="frame" x="146.5" y="374" width="121" height="30"/>
+                                <state key="normal" title="异步-串行-子线程"/>
+                                <connections>
+                                    <action selector="asyncSerialNewThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgV-5O-qTn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhi-FM-GsP">
+                                <rect key="frame" x="138.5" y="414" width="137" height="30"/>
+                                <state key="normal" title="同步-主队列-主线程"/>
+                                <connections>
+                                    <action selector="syncMainQueueMainThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I0b-4q-mqS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fqy-cu-b1B">
+                                <rect key="frame" x="138.5" y="454" width="137" height="30"/>
+                                <state key="normal" title="同步-主队列-子线程"/>
+                                <connections>
+                                    <action selector="syncMainQueueNewThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lym-Wn-aOa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-Uz-Nod">
+                                <rect key="frame" x="138.5" y="494" width="137" height="30"/>
+                                <state key="normal" title="异步-主队列-主线程"/>
+                                <connections>
+                                    <action selector="asyncMainQueueMainThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0gd-VC-ISC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSb-no-Eq0">
+                                <rect key="frame" x="138.5" y="534" width="137" height="30"/>
+                                <state key="normal" title="异步-主队列-子线程"/>
+                                <connections>
+                                    <action selector="asyncMainQueueNewThread:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gx1-Hk-yfV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cOt-N8-vgs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Hc-cI-1oh"/>
+                            <constraint firstItem="nGv-SB-XgQ" firstAttribute="top" secondItem="cOt-N8-vgs" secondAttribute="bottom" constant="10" id="8vY-e0-ePr"/>
+                            <constraint firstItem="4sc-yZ-AyU" firstAttribute="top" secondItem="zhr-TJ-VgA" secondAttribute="bottom" constant="10" id="9Sq-uq-EaC"/>
+                            <constraint firstItem="Fqy-cu-b1B" firstAttribute="top" secondItem="Nhi-FM-GsP" secondAttribute="bottom" constant="10" id="Asm-oS-Sho"/>
+                            <constraint firstItem="cjV-Uz-Nod" firstAttribute="top" secondItem="Fqy-cu-b1B" secondAttribute="bottom" constant="10" id="CEk-ob-1nb"/>
+                            <constraint firstItem="cOt-N8-vgs" firstAttribute="top" secondItem="DAf-ss-zf1" secondAttribute="bottom" constant="10" id="DNK-42-ggc"/>
+                            <constraint firstItem="zft-I9-Nzv" firstAttribute="top" secondItem="zrF-Qv-HxR" secondAttribute="bottom" constant="10" id="Dbu-p6-Kkc"/>
+                            <constraint firstItem="nGv-SB-XgQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GL4-mn-zta"/>
+                            <constraint firstItem="cjV-Uz-Nod" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="H1w-oj-vEG"/>
+                            <constraint firstItem="axT-8a-78Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Ih8-eT-74I"/>
+                            <constraint firstItem="BSb-no-Eq0" firstAttribute="top" secondItem="cjV-Uz-Nod" secondAttribute="bottom" constant="10" id="Jll-a4-CXA"/>
+                            <constraint firstItem="Nhi-FM-GsP" firstAttribute="top" secondItem="nGv-SB-XgQ" secondAttribute="bottom" constant="10" id="KeF-25-9nc"/>
+                            <constraint firstItem="BSb-no-Eq0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LVj-qN-oia"/>
+                            <constraint firstItem="zft-I9-Nzv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OsG-MZ-5Hw"/>
+                            <constraint firstItem="DAf-ss-zf1" firstAttribute="top" secondItem="zft-I9-Nzv" secondAttribute="bottom" constant="10" id="XB8-Bj-cQ2"/>
+                            <constraint firstItem="zhr-TJ-VgA" firstAttribute="top" secondItem="axT-8a-78Y" secondAttribute="bottom" constant="10" id="YRJ-o4-FYN"/>
+                            <constraint firstItem="DAf-ss-zf1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bjy-MU-xi1"/>
+                            <constraint firstItem="Fqy-cu-b1B" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fRl-Uk-7Iy"/>
+                            <constraint firstItem="Nhi-FM-GsP" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="guh-cy-f50"/>
+                            <constraint firstItem="zrF-Qv-HxR" firstAttribute="top" secondItem="4sc-yZ-AyU" secondAttribute="bottom" constant="10" id="kDi-oO-7kB"/>
+                            <constraint firstItem="4sc-yZ-AyU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kaA-IO-YMS"/>
+                            <constraint firstItem="axT-8a-78Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nlr-YH-3OL"/>
+                            <constraint firstItem="zrF-Qv-HxR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o0j-d4-rG4"/>
+                            <constraint firstItem="zhr-TJ-VgA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zt1-qf-ccE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
